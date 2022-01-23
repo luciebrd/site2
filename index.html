@@ -5,8 +5,10 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Photos et téléchargements</title>	
+	<title>Accueil</title>	
 	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<link href="style/video-js.css" rel="stylesheet">
+          <link href="style/videojs-playlist-ui.css" rel="stylesheet">
 </head>
 
 <body>
@@ -57,9 +59,29 @@
 </div>
 <br>
 <!--création player-->
-<div>
-	
-</div>
+<div class="player-container">
+    <video
+      id="video"
+      class="video-js"
+      height="300"
+      width="600"
+      controls>
+      <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+      <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+    </video>
+
+    <div class="vjs-playlist">
+      <!--
+        The contents of this element will be filled based on the
+        currently loaded playlist
+      -->
+    </div>
+  </div>
+<br>
+<!-- visite station-->
+<iframe src="https://esamultimedia.esa.int/multimedia/virtual-tour-iss/" scrolling="no" style="border: 0px none transparent;" allowfullscreen webkitallowfullscreen frameborder="0" width="920" height="450"> </iframe>
+  
+
 	<!--création du pied de page-->
 	<div id="pied_de_page">
 	
@@ -72,7 +94,77 @@
 		<div class="copyright">Copyright Technologies Web - 2019
 			<br />Vannes 56000
 		</div>
-		
+
 	</div>
+	<script src="js/video.js"></script>
+	<script src="js/videojs-playlist.js"></script>
+	<script src="js/videojs-playlist-ui.js"></script>
+	<script>
+	  var player = videojs('video');
+  
+	  player.playlist([{
+		name: 'Huble',
+		description: 'video 1',
+		duration: 45,
+		sources: [
+		  { src: 'https://cdn.spacetelescope.org/archives/videos/medium_podcast/heic2021a.mp4', type: 'video/mp4' },
+		],
+  
+		// you can use <picture> syntax to display responsive images
+		thumbnail: [
+		  {
+			srcset: 'test/example/oceans.jpg',
+			type: 'image/jpeg',
+			media: '(min-width: 400px;)'
+		  },
+		  {
+			src: 'test/example/oceans-low.jpg'
+		  }
+		]
+	  },
+	  {
+		name: 'Explosion d\'une supernova',
+		description: 'video 2',
+		duration: 45,
+		sources: [
+		  { src: 'https://cdn.spacetelescope.org/archives/videos/dome_preview/supernova_explosion_fd.mp4', type: 'video/mp4' },
+		],
+  
+		// you can use <picture> syntax to display responsive images
+		thumbnail: [
+		  {
+			srcset: 'test/example/oceans.jpg',
+			type: 'image/jpeg',
+			media: '(min-width: 400px;)'
+		  },
+		  {
+			src: 'test/example/oceans-low.jpg'
+		  }
+		]
+	  },
+	  {
+		name: 'Zoom sur ngc 4993',
+		description: 'video 3',
+		duration: 45,
+		sources: [
+		  { src: 'https://cdn.spacetelescope.org/archives/videos/medium_podcast/heic1717c.mp4', type: 'video/mp4' },
+		],
+  
+		// you can use <picture> syntax to display responsive images
+		thumbnail: [
+		  {
+			srcset: 'test/example/oceans.jpg',
+			type: 'image/jpeg',
+			media: '(min-width: 400px;)'
+		  },
+		  {
+			src: 'test/example/oceans-low.jpg'
+		  }
+		]
+	  }]);
+  
+	  // Initialize the playlist-ui plugin with no option (i.e. the defaults).
+	  player.playlistUi();
+	</script>
 </body>
 </html>

@@ -214,7 +214,22 @@ input[type=submit] {
     right: 0px;
 }
 /*page video */
+.video-js {
+    float: left;
+  }
 
+  .vjs-playlist,
+  .my-custom-class,
+  #my-custom-element {
+    float: left;
+    width: 300px;
+  }
+
+  .vjs-playlist.vjs-playlist-horizontal {
+    float: none;
+    height: 120px;
+    width: 600px;
+  }
 
 /* page mon compte*/
 .texte-rouge{
