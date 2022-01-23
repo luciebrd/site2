@@ -12,7 +12,7 @@
 <body>
 	<!--Espace réserver à l'entête -->
 <div class="banniere">
-	<img src="images/banniere.png" alt="image de l'espace" />
+	<img src="images/banniere.png" alt="image de l'espace" width="1000px"/>
 </div>
 	<!-- Espace réserver au menu -->
 <div id="menu_top">
@@ -20,8 +20,13 @@
     <li id="actif"><a href="index.html" title="Bienvenue" >Accueil</a></li>
     <li><a href="album.html" title="Photos" >Photos</a></li>
     <li><a href="telechargement.html" title="Téléchargement" >Téléchargements</a></li>
+	<li><a href="video.html" title="Video" >Video</a></li>
+	<li><a href="compte.html" title="Moncompte" >Mon compte</a></li>
+	<li><a href="carte_ciel.html" title="carteduciel" >Carte du ciel</a></li>
     <li><a href="formulaire.html" title="Pour me joindre" >Contact</a></li>
     <li><a href="plan.html" title="plan du site" >Plan du site</a></li>
+	
+
   </ul>
 </div>
 	<!-- incrustation texte-->
@@ -30,11 +35,31 @@
 	<div id="corps">
 		<p class="text_one">Bienvenue sur le site perso de technologies web!</p>
 	<br/>
-		<p class="text_two">Au programme, des photos, des téléchargements ainsi qu'un formulaire si vous voulez me contacter.
-		<br />Bon courage à toutes et à tous !
-		</p>
 	</div>
+
+<!--Géolocalisation de l’ISS -->
+	<div class="tracking">
+		<iframe src= "http://www.lizard-tail.com/isana/tracking/ " scrolling= "no" style= "border : 0px
+		none transparent ; " height="400" width="800"> </iframe>
+	</div>
+
+<!--live stream1 ISS-->
+<div>
+	<div class="block1">
+		<iframe src= "https://ustream.tv/embed/17074538" allowfullscreen title= "Live Stream Feed " height="200" width="400"></iframe>
+	</div>
+<!--live stream2 ISS-->
+	<div class="block2">
+		<iframe src="https://ustream.tv/embed/9408562?html5ui=1&autoplay=true" scrolling="no"
+		allowfullscreen webkitallowfullscreen frameborder="0" style="border: 0 none
+		transparent;" height="200" width="400"></iframe>
+	</div>
+</div>
+<br>
+<!--création player-->
+<div>
 	
+</div>
 	<!--création du pied de page-->
 	<div id="pied_de_page">
 	
